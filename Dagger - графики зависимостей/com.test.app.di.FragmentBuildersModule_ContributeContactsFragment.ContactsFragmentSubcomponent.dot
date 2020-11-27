@@ -1,0 +1,25 @@
+digraph "com.test.app.di.AppComponent → com.test.app.di.MainActivityModule_ContributeMainActivity.MainActivitySubcomponent → com.test.app.di.FragmentBuildersModule_ContributeContactsFragment.ContactsFragmentSubcomponent" {
+  graph [rankdir="LR", labeljust="l", label="AppComponent → MainActivityModule_ContributeMainActivity.MainActivitySubcomponent → FragmentBuildersModule_ContributeContactsFragment.ContactsFragmentSubcomponent", pad="0.2", compound="true"]
+  node [shape="rectangle", style="filled", color="turquoise"]
+  subgraph "cluster_Entry Points" {
+    graph [labeljust="l", label="Entry Points"]
+    node [shape="component", penwidth="2"]
+    "4be0d834-4042-4e64-a070-51309adf8549" [label="inject (ContactsFragment)", color="turquoise", shape="component"]
+  }
+  subgraph "cluster_Dependency Graph" {
+    graph [labeljust="l", label="Dependency Graph"]
+  }
+  subgraph "cluster_Subcomponents" {
+    graph [labeljust="l", shape="folder", label="Subcomponents"]
+  }
+  subgraph "cluster_AppComponent → MainActivityModule_ContributeMainActivity.MainActivitySubcomponent" {
+    graph [labeljust="c", label="Inherited from MainActivityModule_ContributeMainActivity.MainActivitySubcomponent", style="dashed", href="com.test.app.di.MainActivityModule_ContributeMainActivity.MainActivitySubcomponent.png"]
+    "8cada436-e97a-4320-a1fd-0ed37654a785" [label="DispatchingAndroidInjector<Object>", color="turquoise"]
+  }
+  subgraph "cluster_AppComponent" {
+    graph [labeljust="c", label="Inherited from AppComponent\n@Singleton", style="dashed", href="com.test.app.di.AppComponent.png", color="aquamarine"]
+    "4d81976b-6b0d-4656-b6c6-8a92945482d0" [label="ViewModelProvider.Factory", color="turquoise"]
+  }
+  "4be0d834-4042-4e64-a070-51309adf8549" -> "8cada436-e97a-4320-a1fd-0ed37654a785"
+  "4be0d834-4042-4e64-a070-51309adf8549" -> "4d81976b-6b0d-4656-b6c6-8a92945482d0"
+}

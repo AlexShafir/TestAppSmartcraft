@@ -1,0 +1,66 @@
+digraph "com.test.app.di.AppComponent → com.test.app.di.MainActivityModule_ContributeMainActivity.MainActivitySubcomponent" {
+  graph [rankdir="LR", labeljust="l", label="AppComponent → MainActivityModule_ContributeMainActivity.MainActivitySubcomponent", pad="0.2", compound="true"]
+  node [shape="rectangle", style="filled", color="turquoise"]
+  subgraph "cluster_Entry Points" {
+    graph [labeljust="l", label="Entry Points"]
+    node [shape="component", penwidth="2"]
+    "3dfd27a2-f220-40d5-8751-41cad662ff05" [label="inject (MainActivity)", color="turquoise", shape="component"]
+  }
+  subgraph "cluster_Dependency Graph" {
+    graph [labeljust="l", label="Dependency Graph"]
+    "b9ab8a60-6b5a-4dde-a7c1-349c02c2357d" [label="DispatchingAndroidInjector<Object>", color="turquoise"]
+    "027e43e7-2086-46b0-918c-025e1755a205" [label="FragmentBuildersModule_ContributeLoginFragment.bindAndroidInjectorFactory()", color="turquoise"]
+    "ccfa96c1-b5c0-4b92-a577-c560ab4df3b3" [label="FragmentBuildersModule_ContributeContactsFragment.bindAndroidInjectorFactory()", color="turquoise"]
+    "2853604b-d102-4f3a-a0e1-d81a4da06b96" [label="LoginFragmentSubcomponent.Factory\n\nSubcomponent Creator", color="turquoise"]
+    "2b61fe63-ad23-47da-b4ca-bbb705094874" [label="ContactsFragmentSubcomponent.Factory\n\nSubcomponent Creator", color="turquoise"]
+    subgraph "cluster_Map<Class<?>, Provider<AndroidInjector.Factory<?>>>" {
+      graph [label="Map<Class<?>, Provider<AndroidInjector.Factory<?>>>", labeljust="c", style="rounded", color="black"]
+      "cab1fae7-e03c-42f5-bf65-9ad56266b3b2" [label="Map<Class<?>, Provider<AndroidInjector.Factory<?>>>", color="turquoise", shape="tab"]
+      "027e43e7-2086-46b0-918c-025e1755a205" [label="FragmentBuildersModule_ContributeLoginFragment.bindAndroidInjectorFactory()", color="turquoise"]
+      "80a8118c-4603-4ea2-912d-d14f4c6b54aa" [label="MainActivityModule_ContributeMainActivity.bindAndroidInjectorFactory()", color="turquoise"]
+      "ccfa96c1-b5c0-4b92-a577-c560ab4df3b3" [label="FragmentBuildersModule_ContributeContactsFragment.bindAndroidInjectorFactory()", color="turquoise"]
+    }
+  }
+  subgraph "cluster_Subcomponents" {
+    graph [labeljust="l", shape="folder", label="Subcomponents"]
+    "263f9aeb-0e5b-44dc-90e9-19db5760b0a3" [label="FragmentBuildersModule_ContributeLoginFragment.LoginFragmentSubcomponent", href="com.test.app.di.FragmentBuildersModule_ContributeLoginFragment.LoginFragmentSubcomponent.png"]
+    "e3558069-4186-44eb-8150-d5eb45ebb6bc" [label="FragmentBuildersModule_ContributeContactsFragment.ContactsFragmentSubcomponent", href="com.test.app.di.FragmentBuildersModule_ContributeContactsFragment.ContactsFragmentSubcomponent.png"]
+  }
+  subgraph "cluster_AppComponent → MainActivityModule_ContributeMainActivity.MainActivitySubcomponent" {
+    graph [labeljust="c", label="Inherited from MainActivityModule_ContributeMainActivity.MainActivitySubcomponent", style="dashed", href="com.test.app.di.MainActivityModule_ContributeMainActivity.MainActivitySubcomponent.png"]
+    "b9ab8a60-6b5a-4dde-a7c1-349c02c2357d" [label="DispatchingAndroidInjector<Object>", color="turquoise"]
+    "027e43e7-2086-46b0-918c-025e1755a205" [label="FragmentBuildersModule_ContributeLoginFragment.bindAndroidInjectorFactory()", color="turquoise"]
+    "ccfa96c1-b5c0-4b92-a577-c560ab4df3b3" [label="FragmentBuildersModule_ContributeContactsFragment.bindAndroidInjectorFactory()", color="turquoise"]
+    "2853604b-d102-4f3a-a0e1-d81a4da06b96" [label="LoginFragmentSubcomponent.Factory\n\nSubcomponent Creator", color="turquoise"]
+    "2b61fe63-ad23-47da-b4ca-bbb705094874" [label="ContactsFragmentSubcomponent.Factory\n\nSubcomponent Creator", color="turquoise"]
+    subgraph "cluster_Map<Class<?>, Provider<AndroidInjector.Factory<?>>>" {
+      graph [label="Map<Class<?>, Provider<AndroidInjector.Factory<?>>>", labeljust="c", style="rounded", color="black"]
+      "cab1fae7-e03c-42f5-bf65-9ad56266b3b2" [label="Map<Class<?>, Provider<AndroidInjector.Factory<?>>>", color="turquoise", shape="tab"]
+      "027e43e7-2086-46b0-918c-025e1755a205" [label="FragmentBuildersModule_ContributeLoginFragment.bindAndroidInjectorFactory()", color="turquoise"]
+      "80a8118c-4603-4ea2-912d-d14f4c6b54aa" [label="MainActivityModule_ContributeMainActivity.bindAndroidInjectorFactory()", color="turquoise"]
+      "ccfa96c1-b5c0-4b92-a577-c560ab4df3b3" [label="FragmentBuildersModule_ContributeContactsFragment.bindAndroidInjectorFactory()", color="turquoise"]
+    }
+  }
+  subgraph "cluster_AppComponent" {
+    graph [labeljust="c", label="Inherited from AppComponent\n@Singleton", style="dashed", href="com.test.app.di.AppComponent.png", color="aquamarine"]
+    "7405e5a1-bdc1-4e1c-94ac-d5e14346e58e" [label="@Singleton\nActivityResultClient", color="aquamarine"]
+    "a9cb683d-8705-4269-ab88-61f3d7bdd556" [label="ViewModelProvider.Factory", color="turquoise"]
+    "80a8118c-4603-4ea2-912d-d14f4c6b54aa" [label="MainActivityModule_ContributeMainActivity.bindAndroidInjectorFactory()", color="turquoise"]
+    subgraph "cluster_Map<String, Provider<AndroidInjector.Factory<?>>>" {
+      graph [label="Map<String, Provider<AndroidInjector.Factory<?>>>", labeljust="c", style="rounded", color="black"]
+      "1e230b0b-4964-4cea-ba7e-3181f7422819" [label="Map<String, Provider<AndroidInjector.Factory<?>>>", color="turquoise", shape="tab"]
+    }
+  }
+  "3dfd27a2-f220-40d5-8751-41cad662ff05" -> "a9cb683d-8705-4269-ab88-61f3d7bdd556"
+  "3dfd27a2-f220-40d5-8751-41cad662ff05" -> "b9ab8a60-6b5a-4dde-a7c1-349c02c2357d"
+  "3dfd27a2-f220-40d5-8751-41cad662ff05" -> "7405e5a1-bdc1-4e1c-94ac-d5e14346e58e"
+  "b9ab8a60-6b5a-4dde-a7c1-349c02c2357d" -> "cab1fae7-e03c-42f5-bf65-9ad56266b3b2"
+  "b9ab8a60-6b5a-4dde-a7c1-349c02c2357d" -> "1e230b0b-4964-4cea-ba7e-3181f7422819"
+  "cab1fae7-e03c-42f5-bf65-9ad56266b3b2" -> "ccfa96c1-b5c0-4b92-a577-c560ab4df3b3"
+  "cab1fae7-e03c-42f5-bf65-9ad56266b3b2" -> "80a8118c-4603-4ea2-912d-d14f4c6b54aa"
+  "cab1fae7-e03c-42f5-bf65-9ad56266b3b2" -> "027e43e7-2086-46b0-918c-025e1755a205"
+  "027e43e7-2086-46b0-918c-025e1755a205" -> "2853604b-d102-4f3a-a0e1-d81a4da06b96" [style="dotted", label="delegates"]
+  "ccfa96c1-b5c0-4b92-a577-c560ab4df3b3" -> "2b61fe63-ad23-47da-b4ca-bbb705094874" [style="dotted", label="delegates"]
+  "2853604b-d102-4f3a-a0e1-d81a4da06b96" -> "263f9aeb-0e5b-44dc-90e9-19db5760b0a3" [style="dashed", label="subcomponent", headport="w"]
+  "2b61fe63-ad23-47da-b4ca-bbb705094874" -> "e3558069-4186-44eb-8150-d5eb45ebb6bc" [style="dashed", label="subcomponent", headport="w"]
+}

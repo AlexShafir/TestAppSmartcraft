@@ -1,0 +1,112 @@
+digraph "com.test.app.di.AppComponent" {
+  graph [rankdir="LR", labeljust="l", label="AppComponent", pad="0.2", compound="true"]
+  node [shape="rectangle", style="filled", color="turquoise"]
+  subgraph "cluster_Entry Points" {
+    graph [labeljust="l", label="Entry Points"]
+    node [shape="component", penwidth="2"]
+    "2bcb3876-0b93-42d9-9f21-6cb6fbbb7938" [label="inject (App)", color="turquoise", shape="component"]
+  }
+  subgraph "cluster_Dependency Graph" {
+    graph [labeljust="l", label="Dependency Graph"]
+    "f1ff310b-9e87-4530-86f3-1b229564bf9d" [label="DispatchingAndroidInjector<Object>", color="turquoise"]
+    "f7925096-3a01-4578-a4a9-97d48c3c9768" [label="MainActivityModule_ContributeMainActivity.bindAndroidInjectorFactory()", color="turquoise"]
+    "9317e8c1-8ba5-40e0-849d-b7da436fc11c" [label="MainActivitySubcomponent.Factory\n\nSubcomponent Creator", color="turquoise"]
+    "5f32e80c-55f8-424a-8ceb-a36654efdb82" [label="ViewModelProvider.Factory", color="turquoise"]
+    "d153171c-6d2a-4ca1-8c2b-a5e373e5057a" [label="@Singleton\nViewModelFactory", color="aquamarine"]
+    "f524442e-5afa-4f2f-b082-7889c23414e5" [label="ViewModelModule.bindLoginFragmentViewModel()", color="turquoise"]
+    "3b75b48d-703e-46f0-be97-e47ce566ab49" [label="ViewModelModule.bindContactsFragmentViewModel()", color="turquoise"]
+    "1c852dd8-3cc6-4b8b-9639-58a1b9e02f11" [label="ViewModelModule.bindMainActivityViewModel()", color="turquoise"]
+    "b3e94358-4806-4b7d-b00d-8e4de5f1734f" [label="LoginFragmentViewModel", color="turquoise"]
+    "11315180-7df3-47f8-8612-cb1cb3089c77" [label="@Singleton\nIScreenNavigator", color="aquamarine"]
+    "96d00edc-76b1-4ceb-a989-507f67436fa6" [label="@Singleton\nIConnection", color="aquamarine"]
+    "445a8290-6a7f-4148-8d38-624f978fdaad" [label="@Singleton\nILoginUC", color="aquamarine"]
+    "a8215d74-9067-4880-84f7-2248b06e749a" [label="Context", color="turquoise", shape="parallelogram"]
+    "a6d8a321-0903-451a-a38a-2379cdd10a1a" [label="@Singleton\nIntentLoginModel", color="aquamarine"]
+    "274eeb2e-1185-4d98-82ed-1b19da520d5c" [label="@Singleton\nITokenStorage", color="aquamarine"]
+    "dc31b59d-fd95-44a7-9c4d-66e0161767af" [label="@Singleton\nIContacts", color="aquamarine"]
+    "41d0405a-1702-4110-8e54-b2fcea15e8fb" [label="@Singleton\nGoogleLoginModel", color="aquamarine"]
+    "54870246-0268-4aec-b9f4-7ce1f89bee18" [label="@Singleton\nOAuth2Api", color="aquamarine"]
+    "f341342c-7a43-433a-b9a7-df48e5336df9" [label="@Named(\"ClientId\")\n@Singleton\nString", color="aquamarine"]
+    "8501679c-7e29-4f13-95f2-6b5741247a25" [label="@Named(\"ClientSecret\")\n@Singleton\nString", color="aquamarine"]
+    "eab137bf-4ba4-4ffc-bfa2-e40660a695e9" [label="@Singleton\nGooglePeopleApi", color="aquamarine"]
+    "cdeb5e05-7a4b-41af-bbee-8c1b78554e5b" [label="@Singleton\nContactsDao", color="aquamarine"]
+    "4d687dee-a599-45b8-b799-e7f96b8f1a50" [label="@Singleton\nAuthorizationInterceptor", color="aquamarine"]
+    "40784a71-5110-4c7e-96af-b68a58f5e79a" [label="@Singleton\nOAuth2Authenticator", color="aquamarine"]
+    "1b9f3a7c-d375-4657-ad5f-7d6fc2ed87b3" [label="@Singleton\nIRefreshTokenService", color="aquamarine"]
+    "f3685c60-c282-4385-aa7c-101fb5f1183d" [label="@Singleton\nIOnTokenRevokedUC", color="aquamarine"]
+    "928836bb-8940-4506-ad47-234ff20d5210" [label="@Singleton\nAppDatabase", color="aquamarine"]
+    "6044788a-c29e-4644-b058-1aa7926c890e" [label="ContactsFragmentViewModel", color="turquoise"]
+    "cdb9bda6-69eb-47ef-8877-39ecdd7338e9" [label="@Singleton\nIContactsUC", color="aquamarine"]
+    "de115811-1c1a-4174-a8e6-41defe2a1348" [label="MainActivityViewModel", color="turquoise"]
+    "9072b2ea-c07f-4380-8dc4-a3b0b7cb5e56" [label="@Singleton\nIScreenSelectorUC", color="aquamarine"]
+    "8aad31a2-97c0-4851-bd4d-979f0c69622c" [label="@Singleton\nActivityResultClient", color="aquamarine"]
+    subgraph "cluster_Map<Class<?>, Provider<AndroidInjector.Factory<?>>>" {
+      graph [label="Map<Class<?>, Provider<AndroidInjector.Factory<?>>>", labeljust="c", style="rounded", color="black"]
+      "d774b3ff-32df-444d-8d9b-57387c66924a" [label="Map<Class<?>, Provider<AndroidInjector.Factory<?>>>", color="turquoise", shape="tab"]
+      "f7925096-3a01-4578-a4a9-97d48c3c9768" [label="MainActivityModule_ContributeMainActivity.bindAndroidInjectorFactory()", color="turquoise"]
+    }
+    subgraph "cluster_Map<String, Provider<AndroidInjector.Factory<?>>>" {
+      graph [label="Map<String, Provider<AndroidInjector.Factory<?>>>", labeljust="c", style="rounded", color="black"]
+      "65641a80-718f-48ff-81da-77e62014be51" [label="Map<String, Provider<AndroidInjector.Factory<?>>>", color="turquoise", shape="tab"]
+    }
+    subgraph "cluster_Map<Class<? extends androidx.lifecycle.ViewModel>, Provider<ViewModel>>" {
+      graph [label="Map<Class<? extends androidx.lifecycle.ViewModel>, Provider<ViewModel>>", labeljust="c", style="rounded", color="black"]
+      "056d3da0-a512-4239-8cbf-3db5a17b692f" [label="Map<Class<? extends androidx.lifecycle.ViewModel>, Provider<ViewModel>>", color="turquoise", shape="tab"]
+      "f524442e-5afa-4f2f-b082-7889c23414e5" [label="ViewModelModule.bindLoginFragmentViewModel()", color="turquoise"]
+      "1c852dd8-3cc6-4b8b-9639-58a1b9e02f11" [label="ViewModelModule.bindMainActivityViewModel()", color="turquoise"]
+      "3b75b48d-703e-46f0-be97-e47ce566ab49" [label="ViewModelModule.bindContactsFragmentViewModel()", color="turquoise"]
+    }
+  }
+  subgraph "cluster_Subcomponents" {
+    graph [labeljust="l", shape="folder", label="Subcomponents"]
+    "84887ab5-7841-4b0f-bb59-ecfccbbe6bd4" [label="MainActivityModule_ContributeMainActivity.MainActivitySubcomponent", href="com.test.app.di.MainActivityModule_ContributeMainActivity.MainActivitySubcomponent.png"]
+  }
+  "2bcb3876-0b93-42d9-9f21-6cb6fbbb7938" -> "f1ff310b-9e87-4530-86f3-1b229564bf9d"
+  "f1ff310b-9e87-4530-86f3-1b229564bf9d" -> "d774b3ff-32df-444d-8d9b-57387c66924a"
+  "f1ff310b-9e87-4530-86f3-1b229564bf9d" -> "65641a80-718f-48ff-81da-77e62014be51"
+  "d774b3ff-32df-444d-8d9b-57387c66924a" -> "f7925096-3a01-4578-a4a9-97d48c3c9768"
+  "f7925096-3a01-4578-a4a9-97d48c3c9768" -> "9317e8c1-8ba5-40e0-849d-b7da436fc11c" [style="dotted", label="delegates"]
+  "9317e8c1-8ba5-40e0-849d-b7da436fc11c" -> "84887ab5-7841-4b0f-bb59-ecfccbbe6bd4" [style="dashed", label="subcomponent", headport="w"]
+  "5f32e80c-55f8-424a-8ceb-a36654efdb82" -> "d153171c-6d2a-4ca1-8c2b-a5e373e5057a" [style="dotted", label="delegates"]
+  "d153171c-6d2a-4ca1-8c2b-a5e373e5057a" -> "056d3da0-a512-4239-8cbf-3db5a17b692f"
+  "056d3da0-a512-4239-8cbf-3db5a17b692f" -> "f524442e-5afa-4f2f-b082-7889c23414e5"
+  "056d3da0-a512-4239-8cbf-3db5a17b692f" -> "1c852dd8-3cc6-4b8b-9639-58a1b9e02f11"
+  "056d3da0-a512-4239-8cbf-3db5a17b692f" -> "3b75b48d-703e-46f0-be97-e47ce566ab49"
+  "f524442e-5afa-4f2f-b082-7889c23414e5" -> "b3e94358-4806-4b7d-b00d-8e4de5f1734f" [style="dotted", label="delegates"]
+  "3b75b48d-703e-46f0-be97-e47ce566ab49" -> "6044788a-c29e-4644-b058-1aa7926c890e" [style="dotted", label="delegates"]
+  "1c852dd8-3cc6-4b8b-9639-58a1b9e02f11" -> "de115811-1c1a-4174-a8e6-41defe2a1348" [style="dotted", label="delegates"]
+  "b3e94358-4806-4b7d-b00d-8e4de5f1734f" -> "96d00edc-76b1-4ceb-a989-507f67436fa6"
+  "b3e94358-4806-4b7d-b00d-8e4de5f1734f" -> "445a8290-6a7f-4148-8d38-624f978fdaad"
+  "b3e94358-4806-4b7d-b00d-8e4de5f1734f" -> "11315180-7df3-47f8-8612-cb1cb3089c77"
+  "6044788a-c29e-4644-b058-1aa7926c890e" -> "96d00edc-76b1-4ceb-a989-507f67436fa6"
+  "96d00edc-76b1-4ceb-a989-507f67436fa6" -> "a8215d74-9067-4880-84f7-2248b06e749a"
+  "445a8290-6a7f-4148-8d38-624f978fdaad" -> "a6d8a321-0903-451a-a38a-2379cdd10a1a"
+  "445a8290-6a7f-4148-8d38-624f978fdaad" -> "dc31b59d-fd95-44a7-9c4d-66e0161767af"
+  "445a8290-6a7f-4148-8d38-624f978fdaad" -> "274eeb2e-1185-4d98-82ed-1b19da520d5c"
+  "8501679c-7e29-4f13-95f2-6b5741247a25" -> "a8215d74-9067-4880-84f7-2248b06e749a"
+  "274eeb2e-1185-4d98-82ed-1b19da520d5c" -> "a8215d74-9067-4880-84f7-2248b06e749a"
+  "928836bb-8940-4506-ad47-234ff20d5210" -> "a8215d74-9067-4880-84f7-2248b06e749a"
+  "f341342c-7a43-433a-b9a7-df48e5336df9" -> "a8215d74-9067-4880-84f7-2248b06e749a"
+  "a6d8a321-0903-451a-a38a-2379cdd10a1a" -> "41d0405a-1702-4110-8e54-b2fcea15e8fb"
+  "4d687dee-a599-45b8-b799-e7f96b8f1a50" -> "274eeb2e-1185-4d98-82ed-1b19da520d5c"
+  "40784a71-5110-4c7e-96af-b68a58f5e79a" -> "274eeb2e-1185-4d98-82ed-1b19da520d5c"
+  "f3685c60-c282-4385-aa7c-101fb5f1183d" -> "274eeb2e-1185-4d98-82ed-1b19da520d5c"
+  "9072b2ea-c07f-4380-8dc4-a3b0b7cb5e56" -> "274eeb2e-1185-4d98-82ed-1b19da520d5c"
+  "cdb9bda6-69eb-47ef-8877-39ecdd7338e9" -> "dc31b59d-fd95-44a7-9c4d-66e0161767af"
+  "dc31b59d-fd95-44a7-9c4d-66e0161767af" -> "eab137bf-4ba4-4ffc-bfa2-e40660a695e9"
+  "dc31b59d-fd95-44a7-9c4d-66e0161767af" -> "cdeb5e05-7a4b-41af-bbee-8c1b78554e5b"
+  "8aad31a2-97c0-4851-bd4d-979f0c69622c" -> "41d0405a-1702-4110-8e54-b2fcea15e8fb"
+  "41d0405a-1702-4110-8e54-b2fcea15e8fb" -> "f341342c-7a43-433a-b9a7-df48e5336df9"
+  "41d0405a-1702-4110-8e54-b2fcea15e8fb" -> "54870246-0268-4aec-b9f4-7ce1f89bee18"
+  "41d0405a-1702-4110-8e54-b2fcea15e8fb" -> "8501679c-7e29-4f13-95f2-6b5741247a25"
+  "1b9f3a7c-d375-4657-ad5f-7d6fc2ed87b3" -> "54870246-0268-4aec-b9f4-7ce1f89bee18"
+  "1b9f3a7c-d375-4657-ad5f-7d6fc2ed87b3" -> "f341342c-7a43-433a-b9a7-df48e5336df9"
+  "1b9f3a7c-d375-4657-ad5f-7d6fc2ed87b3" -> "8501679c-7e29-4f13-95f2-6b5741247a25"
+  "eab137bf-4ba4-4ffc-bfa2-e40660a695e9" -> "4d687dee-a599-45b8-b799-e7f96b8f1a50"
+  "eab137bf-4ba4-4ffc-bfa2-e40660a695e9" -> "40784a71-5110-4c7e-96af-b68a58f5e79a"
+  "cdeb5e05-7a4b-41af-bbee-8c1b78554e5b" -> "928836bb-8940-4506-ad47-234ff20d5210"
+  "40784a71-5110-4c7e-96af-b68a58f5e79a" -> "f3685c60-c282-4385-aa7c-101fb5f1183d"
+  "40784a71-5110-4c7e-96af-b68a58f5e79a" -> "1b9f3a7c-d375-4657-ad5f-7d6fc2ed87b3"
+  "6044788a-c29e-4644-b058-1aa7926c890e" -> "cdb9bda6-69eb-47ef-8877-39ecdd7338e9"
+  "de115811-1c1a-4174-a8e6-41defe2a1348" -> "9072b2ea-c07f-4380-8dc4-a3b0b7cb5e56"
+}

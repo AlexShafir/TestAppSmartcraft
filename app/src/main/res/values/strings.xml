@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">TestApp</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="login_fragment_label">Login</string>
+    <string name="contacts_fragment_label">Contacts</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="msg_no_internet">No Internet connection</string>
+    <string name="msg_syncing_contacts">Syncing contacts…</string>
+    <string name="hint_contacts_search">Enter name or organization</string>
+    <string name="stub_no_company">No company</string>
+    <string name="action_sync">Sync</string>
+
+    <!-- OAuth -->
+    <string name="server_client_id" tools:ignore="TypographyDashes">95494877337-00p9cgave4fdbbs1if89i89qkk2d78g5.apps.googleusercontent.com</string>
+    <string name="server_client_secret">E_lX5B0Lqbvb-TXz-xYUVDHv</string>
+
+    <string name="shared_prefs_name">MyAppPrefs</string>
+
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+No start destination specified as it is selected in runtime.
+Both fragments are top-level.
+ -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph">
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.test.app.presentation.login.LoginFragment"
+        android:label="@string/login_fragment_label"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_login_success"
+            app:destination="@id/ContactsFragment"
+            app:popUpTo="@id/LoginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ContactsFragment"
+        android:name="com.test.app.presentation.contacts.ContactsFragment"
+        android:label="@string/contacts_fragment_label"
+        tools:layout="@layout/fragment_contacts">
+    </fragment>
+
+</navigation>
